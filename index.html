@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Home | Revz Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url('https://thumbs.dreamstime.com/b/dynamic-blurred-image-gym-fitness-room-featuring-equipment-motivating-atmosphere-perfect-wellness-related-projects-360159983.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-attachment: fixed;
+      color: #fdfdfd;
+    }
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85) !important;
+    }
+
+    .hero {
+      background-color: rgba(0, 123, 255, 0.85);
+      color: #000000;
+    }
+
+    .cta {
+      background-color: rgba(0, 123, 255, 0.85);
+      color: #000000;
+    }
+
+    footer {
+      background-color: rgba(0, 123, 255, 0.85);
+      color: #ffffff;
+    }
+
+    .container, .card, .blockquote {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 20px;
+      border-radius: 12px;
+      color: #000000;
+    }
+
+    h1, h2, h3, h4, h5, h6, p, a, .nav-link, .blockquote-footer {
+      color: #000000 !important;
+    }
+
+    .navbar-brand img {
+      height: 50px;
+      width: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark px-4">
+    <a class="navbar-brand d-flex align-items-center" href="index.html">
+      <img src="logo1.png" alt="Revz Fitness Logo" style="height: 50px; width: auto; margin-right: 10px;">
+      Revz Fitness
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto" id="navbarLinks">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        <li class="nav-item" id="loginItem"><a class="nav-link" href="login.html">Login</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <div class="hero text-center py-0.5">
+    <h1 class="display-4">Welcome to Revz Fitness Studio</h1>
+    <p class="lead">Your journey to a healthier, stronger you starts here.</p>
+    <a href="courses.html" class="btn btn-light btn-lg mt-3">Explore Our Courses</a>
+  </div>
+
+  <!-- About Section -->
+  <div class="container text-center my-5">
+    <h2>Why Choose Revz Fitness?</h2>
+    <p>At Revz Fitness, we offer personalized fitness plans tailored to your goals, whether you're aiming to build muscle, lose weight, or improve overall fitness. Our certified trainers provide expert guidance, and our supportive community will keep you motivated every step of the way.</p>
+  </div>
+
+  <!-- Services Section -->
+  <div class="container text-center my-5">
+    <h2>Our Services</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <h3>Personal Training</h3>
+        <p>One-on-one sessions with expert trainers to help you achieve your fitness goals faster.</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Group Classes</h3>
+        <p>Join our energizing group fitness classes, from yoga to high-intensity interval training (HIIT).</p>
+      </div>
+      <div class="col-md-4">
+        <h3>Nutrition Coaching</h3>
+        <p>Get personalized nutrition plans that complement your workout routine and help you fuel your body.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Testimonials Section -->
+  <div class="container text-center my-5">
+    <h2>What Our Members Say</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"Revz Fitness transformed my life! The trainers are amazing, and I've seen results in just a few weeks."</p>
+          <footer class="blockquote-footer">John Doe</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"The group classes are so much fun and the community here is so supportive!"</p>
+          <footer class="blockquote-footer">Sarah Smith</footer>
+        </blockquote>
+      </div>
+      <div class="col-md-4">
+        <blockquote class="blockquote">
+          <p>"The personalized plans are a game-changer. I feel stronger and healthier than ever!"</p>
+          <footer class="blockquote-footer">Michael Johnson</footer>
+        </blockquote>
+      </div>
+    </div>
+  </div>
+
+  <!-- Call to Action Section -->
+  <div class="cta text-center py-0.5">
+    <h3>Ready to start your fitness journey?</h3>
+    <p>Join us today and unlock your full potential with our personalized fitness plans and expert trainers!</p>
+    <a href="contact.html" class="btn btn-light btn-lg mt-3">Contact Us Now</a>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-white text-center py-3">
+    <p>&copy; 2025 Revz Fitness. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Profile Modal -->
+  <div class="modal fade" id="profileModal" tabindex="-1" aria-labelledby="profileModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content text-center p-4">
+        <img id="profilePic" src="" alt="Profile Picture" class="rounded-circle mb-3" width="100" height="100">
+        <h5 id="profileName"></h5>
+        <p id="profileEmail"></p>
+        <button class="btn btn-danger mt-2" onclick="logout()">Log Out</button>
+        <button type="button" class="btn btn-secondary mt-2" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const user = JSON.parse(localStorage.getItem("revzUser"));
+    if (user) {
+      const loginItem = document.getElementById("loginItem");
+      loginItem.innerHTML = `<a class="nav-link" href="profile.html">My Profile</a>`;
+    }
+
+    function showProfile() {
+      const user = JSON.parse(localStorage.getItem("revzUser"));
+      if (!user) return;
+
+      const username = user.email.split("@")[0];
+      const avatarUrl = `https://api.dicebear.com/7.x/initials/svg?seed=${username}`;
+
+      document.getElementById("profileName").innerText = `Welcome, ${username}!`;
+      document.getElementById("profileEmail").innerText = `Email: ${user.email}`;
+      document.getElementById("profilePic").src = avatarUrl;
+
+      const profileModal = new bootstrap.Modal(document.getElementById("profileModal"));
+      profileModal.show();
+    }
+
+    function logout() {
+      localStorage.removeItem("revzUser");
+      window.location.href = "login.html";
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #fefefe;
+  color: #000000; /* Changed text color to black */
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+}
+
+h1, h2, h3 {
+  color: #000000; /* Changed text color to black */
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  background-color: #4d3a3a;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ff6f61 !important;
+}
+
+footer {
+  background-color: #343a40;
+  color: #ffffff; /* Footer text remains white */
+  padding: 20px 0;
+}
+
+/* Home Section */
+.container.text-center {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* About Us Section */
+.container.mt-5 {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+/* Courses Section */
+.card {
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-img-top {
+  border-radius: 10px;
+  height: 400px;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 15px;
+}
+
+.apply-btn {
+  margin-top: 15px;
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+.apply-btn:hover {
+  background-color: #e65c53;
+  border-color: #e65c53;
+}
+
+/* Contact Section */
+.text-center a {
+  color: #000000; /* Changed link color to black */
+  text-decoration: none;
+}
+
+.text-center a:hover {
+  color: #ff6f61;
+}
+
+.container.my-5 p {
+  font-size: 1.2rem;
+}
+
+.form-control {
+  border-radius: 5px;
+  padding: 12px;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #ff6f61;
+  border-color: #ff6f61;
+  padding: 10px 15px;
+}
+
+.btn-primary:hover {
+  background-color: #e65c53;
+  border-color: #e65c53;
+}
+
+/* Map Section */
+.embed-responsive {
+  margin-top: 30px;
+}
+
+/* Social Media Section */
+.btn-social-icon {
+  font-size: 1.5rem;
+  padding: 10px;
+  width: 45px;
+  height: 45px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-social-icon:hover {
+  background-color: #ff6f61;
+}
+
+.btn-facebook {
+  background-color: #3b5998;
+  color: white;
+}
+
+.btn-facebook:hover {
+  background-color: #2d4373;
+}
+
+.btn-twitter {
+  background-color: #1da1f2;
+  color: white;
+}
+
+.btn-twitter:hover {
+  background-color: #1a91da;
+}
+
+.btn-instagram {
+  background-color: #e1306c;
+  color: white;
+}
+
+.btn-instagram:hover {
+  background-color: #cd1d56;
+}
+
+.btn-linkedin {
+  background-color: #0077b5;
+  color: white;
+}
+
+.btn-linkedin:hover {
+  background-color: #005b85;
+}
+
+/* Footer Styles */
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Courses | Revz Fitness</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+    <a class="navbar-brand d-flex align-items-center" href="courses.html" style="color: white;">
+      <img src="logo1.png" alt="Revz Fitness Logo" style="height: 50px; width: auto; margin-right: 10px;">
+      Revz Fitness
+    </a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Courses Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Our Popular Courses</h2>
+    <div class="row g-4">
+      <!-- Course 1 -->
+      <div class="col-lg-4">
+        <div class="card p-3">
+          <img src="https://content.jdmagicbox.com/comp/def_content/gymnasiums/default-gymnasiums-2.jpg" class="card-img-top" alt="Basic Body Building">
+          <h3 class="mt-2">Basic Body Building - ₹11620</h3>
+          <p>This course is for beginners to learn the fundamentals of strength training.</p>
+          <div class="d-flex justify-content-between">
+            <small class="text-muted">Difficulty: Easy</small>
+            <small class="text-muted">Duration: 3 Months</small>
+          </div>
+          <button class="btn btn-primary w-100 apply-btn mt-2" data-course="Basic Body Building" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+        </div>
+      </div>
+      <!-- Course 2 -->
+      <div class="col-lg-4">
+        <div class="card p-3">
+          <img src="https://www.bbcleaningservice.com/wp-content/uploads/2024/07/gym-equipment-1024x576.jpg" class="card-img-top" alt="Intermediate Body Building">
+          <h3 class="mt-2">Intermediate Body Building - ₹16600</h3>
+          <p>Take your fitness to the next level with muscle mass and strength workouts.</p>
+          <div class="d-flex justify-content-between">
+            <small class="text-muted">Difficulty: Medium</small>
+            <small class="text-muted">Duration: 4 Months</small>
+          </div>
+          <button class="btn btn-primary w-100 apply-btn mt-2" data-course="Intermediate Body Building" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+        </div>
+      </div>
+      <!-- Course 3 -->
+      <div class="col-lg-4">
+        <div class="card p-3">
+          <img src="https://www.advancedfitness.co.ke/wp-content/uploads/2023/05/weight.jpeg" class="card-img-top" alt="Advanced Body Building">
+          <h3 class="mt-2">Advanced Body Building - ₹20750</h3>
+          <p>This course is for pros wanting to push their body to peak performance.</p>
+          <div class="d-flex justify-content-between">
+            <small class="text-muted">Difficulty: Hard</small>
+            <small class="text-muted">Duration: 5 Months</small>
+          </div>
+          <button class="btn btn-primary w-100 apply-btn mt-2" data-course="Advanced Body Building" data-bs-toggle="modal" data-bs-target="#applyModal">Apply Now</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="applyModalLabel">Apply for Course</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form id="courseForm">
+            <input type="text" id="name" name="name" class="form-control mb-2" placeholder="Your Name" required />
+            <input type="email" id="email" name="email" class="form-control mb-2" placeholder="Your Email" required />
+            <input type="hidden" id="course" name="course" />
+
+            <div id="payment-details" class="bg-light p-3 rounded mb-3">
+              <h6>Payment Information</h6>
+              <p><strong>Course:</strong> <span id="course-name-display"></span></p>
+              <p><strong>Fee:</strong> ₹<span id="course-price-display"></span></p>
+
+              <div class="mb-3">
+                <label for="payment-method" class="form-label">Select Payment Method</label>
+                <select id="payment-method" class="form-select" required>
+                  <option value="">Choose...</option>
+                  <option value="upi">UPI</option>
+                  <option value="card">Debit/Credit Card</option>
+                  <option value="netbanking">Net Banking</option>
+                  <option value="cash">Cash at Front Desk</option>
+                </select>
+              </div>
+
+              <!-- Dynamic Payment Fields -->
+              <div id="payment-fields"></div>
+
+              <!-- UPI QR Section -->
+              <div class="text-center mt-3" id="qr-section" style="display: none;">
+                <p class="mb-1"><strong>Scan & Pay via UPI:</strong></p>
+                <img src="qr.jpg" alt="UPI QR Code" style="max-width: 200px; height: auto;" />
+                <p class="mt-2"><small>UPI ID: <strong>revzfitness@upi</strong></small></p>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-success w-100">Submit Application</button>
+          </form>
+          <div id="message" class="text-center mt-2"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3 mt-5">
+    <p>&copy; 2025 Revz Fitness. All Rights Reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script>
+    const coursePrices = {
+      "Basic Body Building": 11620,
+      "Intermediate Body Building": 16600,
+      "Advanced Body Building": 20750
+    };
+
+    document.querySelectorAll('.apply-btn').forEach(button => {
+      button.addEventListener('click', () => {
+        const course = button.getAttribute('data-course');
+        document.getElementById('course').value = course;
+        document.getElementById('course-name-display').textContent = course;
+        document.getElementById('course-price-display').textContent = coursePrices[course] || "N/A";
+        document.getElementById('message').textContent = '';
+        document.getElementById('courseForm').reset();
+        document.getElementById('payment-fields').innerHTML = '';
+        document.getElementById('qr-section').style.display = 'none';
+      });
+    });
+
+    document.getElementById('payment-method').addEventListener('change', function () {
+      const method = this.value;
+      const fieldsContainer = document.getElementById('payment-fields');
+      const qrSection = document.getElementById('qr-section');
+      fieldsContainer.innerHTML = '';
+      qrSection.style.display = 'none';
+
+      if (method === 'upi') {
+        qrSection.style.display = 'block';
+        fieldsContainer.innerHTML = `
+          <label for="upi-id" class="form-label">Your UPI ID</label>
+          <input type="text" id="upi-id" name="upi-id" class="form-control" placeholder="e.g., yourname@bank" required>
+        `;
+      } else if (method === 'card') {
+        fieldsContainer.innerHTML = `
+          <label for="card-number" class="form-label">Card Number</label>
+          <input type="text" id="card-number" name="card-number" class="form-control mb-2" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+          <label for="expiry" class="form-label">Expiry Date</label>
+          <input type="text" id="expiry" name="expiry" class="form-control mb-2" placeholder="MM/YY" required>
+          <label for="cvv" class="form-label">CVV</label>
+          <input type="password" id="cvv" name="cvv" class="form-control" required>
+        `;
+      } else if (method === 'netbanking') {
+        fieldsContainer.innerHTML = `
+          <label for="bank-name" class="form-label">Bank Name</label>
+          <input type="text" id="bank-name" name="bank-name" class="form-control mb-2" placeholder="e.g., HDFC, SBI" required>
+          <label for="account-number" class="form-label">Account Number</label>
+          <input type="text" id="account-number" name="account-number" class="form-control" required>
+        `;
+      } else if (method === 'cash') {
+        fieldsContainer.innerHTML = `<p class="text-muted">Please visit the front desk to pay in cash.</p>`;
+      }
+    });
+
+    document.getElementById('courseForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const course = document.getElementById('course').value;
+      const messageEl = document.getElementById('message');
+
+      if (!name || !email || !course) {
+        messageEl.textContent = "All fields are required.";
+        messageEl.className = "text-danger";
+        return;
+      }
+
+      try {
+        const response = await fetch('http://localhost:5500/send-email', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, course })
+        });
+
+        if (!response.ok) throw new Error('Failed request');
+
+        const result = await response.json();
+        messageEl.textContent = result.message || "Application submitted!";
+        messageEl.className = "text-success";
+
+        setTimeout(() => {
+          const modal = bootstrap.Modal.getInstance(document.getElementById('applyModal'));
+          modal.hide();
+          document.getElementById('courseForm').reset();
+          document.getElementById('payment-fields').innerHTML = '';
+          document.getElementById('qr-section').style.display = 'none';
+        }, 2000);
+
+      } catch (err) {
+        messageEl.textContent = "Unable to submit application. Please ensure the server is running.";
+        messageEl.className = "text-danger";
+      }
+    });
+  </script>
+
+</body>
+</html>
